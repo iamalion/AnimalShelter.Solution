@@ -1,7 +1,10 @@
 using AnimalShelterApi.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Versioning;
-using Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer;
+using Microsoft.AspNetCore.Mvc.ApiExplorer;
+using Microsoft.Extensions.DependencyInjection;
+using System.Linq;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -45,6 +48,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI(options =>
     {
+        var apiVersionDescriptionProvider = app.Services.GetRequiredService<IApiVersionDescriptionProvider>();
         foreach (var description in apiVersionDescriptionProvider.ApiVersionDescriptions)
         {
             options.SwaggerEndpoint($"/swagger/{description.GroupName}/swagger.json",
