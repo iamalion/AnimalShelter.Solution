@@ -75,12 +75,59 @@ DELETE https://localhost:5001/api/animals/{id}
 ```
 * Note: `{id}` is a variable and it should be replaced with the id number of the animal you want to GET, PUT, or DELETE.
 
-
 ## Example GET Requests
+`https://localhost:5001/api/Animals/3`
 
+Response:
+```
+{
+  "animalId": 3,
+  "name": "Nibbles",
+  "species": "Hamster",
+  "breed": "Syrian",
+  "age": 1,
+  "description": "Tiny and energetic ball.",
+  "available": false
+} 
+```
+## Example POST Request
+For Post requests, the body is required to add a new animal (see below).
+`https://localhost:5001/api/Animals`
 
-## Example PUT and DELETE Requests
+Body:
+```
+{
+  "animalId": 4,
+  "name": "Crunch",
+  "species": "Dog",
+  "breed": "Pekinese",
+  "age": 1,
+  "description": "Lazy and luxury-loving.",
+  "available": false
+}
+```
 
+## Example PUT Requests
+Put requests require an "id" value for the animal that you want to update or delete, as well as an updated body (see below).
+
+`https://localhost:5001/api/Animals/3`
+
+Body:
+```
+{
+  "animalId": 3,
+  "name": "Nibbles",
+  "species": "Hamster",
+  "breed": "Syrian",
+  "age": 3,
+  "description": "Tiny and energetic ball.",
+  "available": false
+} 
+```
+## Example DELETE Request
+* Delete requests require an "id" value for the animal that you want to delete, but no body is needed.
+
+`https://localhost:5001/api/Animals/5`
 
 ## Known Bugs
 
