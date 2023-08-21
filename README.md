@@ -33,8 +33,11 @@ AnimalShelterAPI is an API used to track animals for a local animal shelter. The
 
 ## Setup/Installation Requirements
 
-* Clone this repository
-* Open your shell (e.g., Terminal or GitBash) and navigate to this project's production directory `AnimalShelterApi``
+* Clone these two repositories: 
+ 1. https://github.com/iamalion/AnimalShelter.Solution
+ * Open your shell (e.g., Terminal or GitBash) and navigate to this project's production directory `AnimalShelterApi`
+ 2. https://github.com/iamalion/AnimalShelterClient.Solution
+ * Navigate to this project's production directory `AnimalShelterClient``
 
 #### To Configure and Access the Database:
 * Within the production directory `AnimalShelterApi`, create a new file called `appsettings.json`._
@@ -52,8 +55,10 @@ AnimalShelterAPI is an API used to track animals for a local animal shelter. The
 to create the initial MySQL database.
 
 #### To Run the API:
-* Navigate to this project's production directory `AnimalShelterApi`
+* Navigate to the production directory `AnimalShelterApi`
 * Run the command `dotnet watch run` in the command line to run the API from your local port. This will also open up Swagger UI in your browser. 
+* Navigate to the production directory `AnimalShelterClient`
+* Run the command `dotnet watch run` in the command line to run the API from your local port. 
 
 #### Use Swagger UI to test an API call (optional):
 * Open your browser and navigate to the Swagger UI tab.
